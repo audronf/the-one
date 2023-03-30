@@ -2,33 +2,39 @@ package com.audronf.theone.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import com.audronf.theone.R
 
-// Set of Material typography styles to start with
+val Ringbearer = FontFamily(
+    Font(R.font.ringbearer)
+)
+
 val Typography = Typography(
     bodyLarge = TextStyle(
-        fontFamily = FontFamily.Default,
+        fontFamily = Ringbearer,
         fontWeight = FontWeight.Normal,
         fontSize = 16.sp,
         lineHeight = 24.sp,
-        letterSpacing = 0.5.sp
-    )
-    /* Other default text styles to override
-    titleLarge = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Normal,
-        fontSize = 22.sp,
-        lineHeight = 28.sp,
-        letterSpacing = 0.sp
+        letterSpacing = 0.5.sp,
+        color = Kabul
     ),
-    labelSmall = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Medium,
-        fontSize = 11.sp,
-        lineHeight = 16.sp,
-        letterSpacing = 0.5.sp
+    headlineLarge = TextStyle(
+        fontFamily = Ringbearer,
+        fontWeight = FontWeight.Normal,
+        fontSize = 36.sp,
+        lineHeight = 48.sp,
+        letterSpacing = 1.sp,
+        color = Kabul
+    ),
+    labelLarge = TextStyle(
+        fontFamily = Ringbearer,
+        fontWeight = FontWeight.Normal,
+        fontSize = 16.sp,
+        lineHeight = 20.sp,
+        letterSpacing = 1.sp,
+        color = Kabul
     )
-    */
 )
