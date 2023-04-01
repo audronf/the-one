@@ -17,11 +17,12 @@ import javax.inject.Inject
 @HiltViewModel
 class BooksViewModel @Inject constructor(private val useCase: FetchBooks) : ViewModel() {
 
-    private val _books: MutableLiveData<BooksState> = MutableLiveData(BooksLoadingState())
+    private val _books: MutableLiveData<BooksState> = MutableLiveData()
     val books: LiveData<BooksState>
         get() = _books
 
     fun fetchBooks() {
+        _books.postValue(BooksLoadingState())
         viewModelScope.launch {
             _books.postValue(
                 when (val req = useCase.invoke()) {

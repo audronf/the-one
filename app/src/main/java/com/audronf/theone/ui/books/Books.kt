@@ -1,6 +1,5 @@
 package com.audronf.theone.ui.books
 
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -11,7 +10,7 @@ fun Books(booksViewModel: BooksViewModel) {
     val booksState by booksViewModel.books.observeAsState()
 
     LaunchedEffect(Unit) {
-        booksViewModel.fetchBooks()
+        booksState ?: booksViewModel.fetchBooks()
     }
 
     booksState?.UiState()

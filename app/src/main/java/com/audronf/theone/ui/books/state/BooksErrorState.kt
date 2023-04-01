@@ -6,6 +6,6 @@ class BooksErrorState : BooksState {
 
     @Composable
     override fun UiState() {
-
+        // TODO: Add error handling
     }
 }
