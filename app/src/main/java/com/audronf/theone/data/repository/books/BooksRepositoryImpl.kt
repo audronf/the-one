@@ -1,8 +1,8 @@
-package com.audronf.theone.data.repository
+package com.audronf.theone.data.repository.books
 
 import com.audronf.theone.data.remote.BooksService
 import com.audronf.theone.domain.model.books.BookResponse
-import com.audronf.theone.domain.repository.BooksRepository
+import com.audronf.theone.domain.repository.books.BooksRepository
 import com.audronf.theone.networking.NetworkRequestHandler
 import com.audronf.theone.networking.NetworkResponse
 import kotlinx.coroutines.Dispatchers

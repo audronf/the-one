@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.audronf.theone.navigation.Navigation
 import com.audronf.theone.ui.books.BooksViewModel
+import com.audronf.theone.ui.characters.CharactersViewModel
 import com.audronf.theone.ui.theme.Sandrift
 import com.audronf.theone.ui.theme.Swirl
 import com.audronf.theone.ui.theme.TheOneTheme
@@ -24,6 +25,7 @@ import javax.inject.Inject
 class MainActivity : ComponentActivity() {
 
     private val booksViewModel: BooksViewModel by viewModels()
+    private val charactersViewModel: CharactersViewModel by viewModels()
 
     @OptIn(ExperimentalMaterial3Api::class)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,7 +35,8 @@ class MainActivity : ComponentActivity() {
                 Scaffold {
                     Column(modifier = Modifier.padding(it)) {
                         Navigation(
-                            booksViewModel
+                            booksViewModel,
+                            charactersViewModel
                         )
                     }
                 }

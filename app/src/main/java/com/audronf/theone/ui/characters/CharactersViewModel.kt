@@ -1,12 +1,12 @@
-package com.audronf.theone.ui.books
+package com.audronf.theone.ui.characters
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.audronf.theone.domain.usecase.books.FetchBooks
+import com.audronf.theone.domain.usecase.characters.FetchCharacters
 import com.audronf.theone.networking.NetworkResponse
-import com.audronf.theone.ui.books.state.BooksSuccessfulState
+import com.audronf.theone.ui.characters.state.CharactersSuccessfulState
 import com.audronf.theone.ui.state.ErrorState
 import com.audronf.theone.ui.state.LoadingState
 import com.audronf.theone.ui.state.UiState
@@ -15,20 +15,20 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class BooksViewModel @Inject constructor(private val useCase: FetchBooks) : ViewModel() {
+class CharactersViewModel @Inject constructor(private val useCase: FetchCharacters) : ViewModel() {
 
-    private val _books: MutableLiveData<UiState> = MutableLiveData()
-    val books: LiveData<UiState>
-        get() = _books
+    private val _characters: MutableLiveData<UiState> = MutableLiveData()
+    val characters: LiveData<UiState>
+        get() = _characters
 
-    fun fetchBooks() {
-        _books.postValue(LoadingState())
+    fun fetchCharacters() {
+        _characters.postValue(LoadingState())
         viewModelScope.launch {
-            _books.postValue(
+            _characters.postValue(
                 when (val req = useCase.invoke()) {
                     is NetworkResponse.Success -> {
                         req.response.body()?.let {
-                            BooksSuccessfulState(it.data)
+                            CharactersSuccessfulState(it)
                         }
                     }
                     else -> {

@@ -1,4 +1,4 @@
-package com.audronf.theone.domain.repository
+package com.audronf.theone.domain.repository.books
 
 import com.audronf.theone.domain.model.books.BookResponse
 import com.audronf.theone.networking.NetworkResponse

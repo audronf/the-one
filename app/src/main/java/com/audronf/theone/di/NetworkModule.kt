@@ -1,6 +1,7 @@
 package com.audronf.theone.di
 
 import com.audronf.theone.BuildConfig
+import com.audronf.theone.networking.AuthorizationInterceptor
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -24,6 +25,7 @@ class NetworkModule {
         }
         return OkHttpClient.Builder()
             .addInterceptor(loggingInterceptor)
+            .addInterceptor(AuthorizationInterceptor())
             .build()
     }
 

@@ -10,8 +10,8 @@ fun Books(booksViewModel: BooksViewModel) {
     val booksState by booksViewModel.books.observeAsState()
 
     LaunchedEffect(Unit) {
-        booksState ?: booksViewModel.fetchBooks()
+        booksViewModel.fetchBooks()
     }
 
-    booksState?.UiState()
+    booksState?.DrawUiState()
 }

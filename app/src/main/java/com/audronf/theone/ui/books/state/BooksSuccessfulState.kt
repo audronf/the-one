@@ -11,12 +11,13 @@ import androidx.compose.ui.unit.dp
 import com.audronf.theone.R
 import com.audronf.theone.domain.model.books.Book
 import com.audronf.theone.ui.components.Book
+import com.audronf.theone.ui.state.UiState
 import com.audronf.theone.ui.theme.Typography
 
-class BooksSuccessfulState(private val books: List<Book>) : BooksState {
+class BooksSuccessfulState(private val books: List<Book>) : UiState {
 
     @Composable
-    override fun UiState() {
+    override fun DrawUiState() {
         Column(modifier = Modifier.padding(horizontal = 16.dp, vertical = 32.dp)) {
             Text(text = stringResource(id = R.string.books_title), style = Typography.headlineLarge)
             Spacer(modifier = Modifier.height(32.dp))

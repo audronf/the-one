@@ -1,19 +1,22 @@
 package com.audronf.theone.navigation
 
 import androidx.compose.runtime.Composable
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.audronf.theone.ui.books.Books
 import com.audronf.theone.ui.books.BooksViewModel
 import com.audronf.theone.ui.characters.Characters
+import com.audronf.theone.ui.characters.CharactersViewModel
 import com.audronf.theone.ui.home.Home
 import com.audronf.theone.ui.movies.Movies
 import com.audronf.theone.ui.quotes.Quotes
 
 @Composable
 fun Navigation(
-    booksViewModel: BooksViewModel
+    booksViewModel: BooksViewModel,
+    charactersViewModel: CharactersViewModel
 ) {
     val navController = rememberNavController()
 
@@ -36,7 +39,9 @@ fun Navigation(
         }
 
         composable(Routes.CHARACTERS) {
-            Characters()
+            Characters(
+                charactersViewModel
+            )
         }
     }
 }
