@@ -10,6 +10,7 @@ import androidx.navigation.NavHostController
 import com.audronf.theone.R
 import com.audronf.theone.navigation.Routes
 import com.audronf.theone.ui.components.HomeButton
+import com.audronf.theone.ui.theme.Dimen32dp
 import com.audronf.theone.ui.theme.Typography
 
 @Composable
@@ -26,7 +27,7 @@ fun Home(navHostController: NavHostController) {
                 textId = R.string.movies_title
             ) { navHostController.navigate(Routes.MOVIES) }
         }
-        Spacer(modifier = Modifier.height(32.dp))
+        Spacer(modifier = Modifier.height(Dimen32dp))
         Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceEvenly) {
             HomeButton(
                 iconId = R.drawable.ic_quote,

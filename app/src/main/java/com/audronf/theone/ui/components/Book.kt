@@ -11,30 +11,28 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.audronf.theone.R
 import com.audronf.theone.domain.model.books.Book
-import com.audronf.theone.ui.theme.Kabul
-import com.audronf.theone.ui.theme.Swirl
-import com.audronf.theone.ui.theme.Typography
+import com.audronf.theone.ui.theme.*
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun Book(book: Book) {
     Card(
-        elevation = CardDefaults.cardElevation(defaultElevation = 3.dp),
+        elevation = CardDefaults.cardElevation(defaultElevation = Dimen4dp),
         modifier = Modifier.fillMaxWidth(),
         colors = CardDefaults.cardColors(containerColor = Swirl, contentColor = Kabul)
     ) {
         Row(
             horizontalArrangement = Arrangement.Start,
             verticalAlignment = Alignment.CenterVertically,
-            modifier = Modifier.padding(vertical = 16.dp)
+            modifier = Modifier.padding(vertical = Dimen16dp)
         ) {
             Image(
                 painter = painterResource(id = R.drawable.ic_book),
                 contentDescription = book.name,
-                modifier = Modifier.size(50.dp)
+                modifier = Modifier.size(Dimen48dp)
             )
-            Spacer(modifier = Modifier.width(16.dp))
-            Text(text = book.name, style = Typography.bodyLarge.copy(fontSize = 20.sp))
+            Spacer(modifier = Modifier.width(Dimen16dp))
+            Text(text = book.name, style = Typography.bodyLarge.copy(fontSize = TextSize20sp))
         }
     }
 }
