@@ -13,10 +13,7 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.audronf.theone.ui.theme.Kabul
-import com.audronf.theone.ui.theme.Sandrift
-import com.audronf.theone.ui.theme.Swirl
-import com.audronf.theone.ui.theme.Typography
+import com.audronf.theone.ui.theme.*
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -25,21 +22,26 @@ fun HomeButton(
     textId: Int,
     action: () -> Unit
 ) {
-    Card(onClick = action, shape = RoundedCornerShape(8.dp), modifier = Modifier.size(144.dp), colors = CardDefaults.cardColors(containerColor = Swirl, contentColor = Kabul)) {
+    Card(
+        onClick = action,
+        shape = RoundedCornerShape(Dimen8dp),
+        modifier = Modifier.size(Dimen144dp),
+        colors = CardDefaults.cardColors(containerColor = Swirl, contentColor = Kabul)
+    ) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(8.dp),
+                .padding(Dimen8dp),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
             Image(
                 painter = painterResource(id = iconId),
                 contentDescription = stringResource(id = textId),
-                modifier = Modifier.size(80.dp),
+                modifier = Modifier.size(Dimen80dp),
                 colorFilter = ColorFilter.tint(color = Kabul)
             )
-            Spacer(modifier = Modifier.height(8.dp))
+            Spacer(modifier = Modifier.height(Dimen8dp))
             Text(text = stringResource(id = textId), style = Typography.labelLarge)
         }
     }
