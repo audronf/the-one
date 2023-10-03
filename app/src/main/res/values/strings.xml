@@ -4,4 +4,10 @@
     <string name="movies_title">Movies</string>
     <string name="quotes_title">Quotes</string>
     <string name="characters_title">Characters</string>
+
+    <!-- Characters screen -->
+    <string name="realm">Realm</string>
+    <string name="race">Race</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
 </resources>
