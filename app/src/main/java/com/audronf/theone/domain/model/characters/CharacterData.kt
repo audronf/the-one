@@ -14,7 +14,10 @@ data class CharacterData(
     @SerializedName("realm") val realm: String,
     @SerializedName("hair") val hair: String,
     @SerializedName("wikiUrl") val wikiUrl: String
-)
+) {
+    val isAlive: Boolean
+        get() = death.isNotBlank()
+}
 
 data class CharactersResponse(
     @SerializedName("docs") val data: List<CharacterData>

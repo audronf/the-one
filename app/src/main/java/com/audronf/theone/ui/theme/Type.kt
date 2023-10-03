@@ -21,6 +21,14 @@ val Typography = Typography(
         letterSpacing = 0.5.sp,
         color = Kabul
     ),
+    bodySmall = TextStyle(
+        fontFamily = Ringbearer,
+        fontWeight = FontWeight.Normal,
+        fontSize = 12.sp,
+        lineHeight = 16.sp,
+        letterSpacing = 0.5.sp,
+        color = Kabul
+    ),
     headlineLarge = TextStyle(
         fontFamily = Ringbearer,
         fontWeight = FontWeight.Normal,
@@ -36,5 +44,13 @@ val Typography = Typography(
         lineHeight = 20.sp,
         letterSpacing = 1.sp,
         color = Kabul
-    )
+    ),
+    labelSmall = TextStyle(
+        fontFamily = Ringbearer,
+        fontWeight = FontWeight.Normal,
+        fontSize = 12.sp,
+        lineHeight = 16.sp,
+        letterSpacing = 1.sp,
+        color = Kabul
+    ),
 )
