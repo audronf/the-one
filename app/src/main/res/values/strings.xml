@@ -10,4 +10,10 @@
     <string name="race">Race</string>
     <string name="female">Female</string>
     <string name="male">Male</string>
+
+    <!-- Movies -->
+    <string name="movie_budget_revenue">%1s millions budget - %2s millions revenue</string>
+    <string name="academy_awards">%1s Academy Awards</string>
+    <string name="rotten_tomatoes_score">%1s on Rotten Tomatoes</string>
+
 </resources>

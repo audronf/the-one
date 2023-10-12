@@ -11,12 +11,14 @@ import com.audronf.theone.ui.characters.Characters
 import com.audronf.theone.ui.characters.CharactersViewModel
 import com.audronf.theone.ui.home.Home
 import com.audronf.theone.ui.movies.Movies
+import com.audronf.theone.ui.movies.MoviesViewModel
 import com.audronf.theone.ui.quotes.Quotes
 
 @Composable
 fun Navigation(
     booksViewModel: BooksViewModel,
-    charactersViewModel: CharactersViewModel
+    charactersViewModel: CharactersViewModel,
+    moviesViewModel: MoviesViewModel
 ) {
     val navController = rememberNavController()
 
@@ -31,7 +33,7 @@ fun Navigation(
         }
 
         composable(Routes.MOVIES) {
-            Movies()
+            Movies(moviesViewModel)
         }
 
         composable(Routes.QUOTES) {
