@@ -2,6 +2,7 @@ package com.audronf.theone.di
 
 import com.audronf.theone.data.remote.BooksService
 import com.audronf.theone.data.remote.CharactersService
+import com.audronf.theone.data.remote.MoviesService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -19,4 +20,8 @@ class ApiModule {
     @Provides
     fun provideCharactersService(retrofit: Retrofit): CharactersService =
         retrofit.create(CharactersService::class.java)
+
+    @Provides
+    fun provideMoviesService(retrofit: Retrofit): MoviesService =
+        retrofit.create(MoviesService::class.java)
 }

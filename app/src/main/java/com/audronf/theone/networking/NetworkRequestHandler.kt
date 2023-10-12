@@ -17,6 +17,7 @@ object NetworkRequestHandler {
             if (response.isSuccessful) NetworkResponse.Success(response)
             else NetworkResponse.Error(response)
         } catch (t: Throwable) {
+            t.printStackTrace()
             NetworkResponse.Failure(t)
         }
 }
