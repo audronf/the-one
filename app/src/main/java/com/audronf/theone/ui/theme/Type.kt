@@ -16,41 +16,41 @@ val Typography = Typography(
     bodyLarge = TextStyle(
         fontFamily = Ringbearer,
         fontWeight = FontWeight.Normal,
-        fontSize = 16.sp,
-        lineHeight = 24.sp,
+        fontSize = TextSize16sp,
+        lineHeight = TextSize24sp,
         letterSpacing = 0.5.sp,
         color = Kabul
     ),
     bodySmall = TextStyle(
-        fontFamily = Ringbearer,
+        fontFamily = FontFamily.Serif,
         fontWeight = FontWeight.Normal,
-        fontSize = 12.sp,
-        lineHeight = 16.sp,
+        fontSize = TextSize12sp,
+        lineHeight = TextSize16sp,
         letterSpacing = 0.5.sp,
         color = Kabul
     ),
     headlineLarge = TextStyle(
         fontFamily = Ringbearer,
         fontWeight = FontWeight.Normal,
-        fontSize = 36.sp,
-        lineHeight = 48.sp,
-        letterSpacing = 1.sp,
+        fontSize = TextSize36sp,
+        lineHeight = TextSize48sp,
+        letterSpacing = TextSize1sp,
         color = Kabul
     ),
     labelLarge = TextStyle(
         fontFamily = Ringbearer,
         fontWeight = FontWeight.Normal,
-        fontSize = 16.sp,
-        lineHeight = 20.sp,
-        letterSpacing = 1.sp,
+        fontSize = TextSize16sp,
+        lineHeight = TextSize20sp,
+        letterSpacing = TextSize1sp,
         color = Kabul
     ),
     labelSmall = TextStyle(
-        fontFamily = Ringbearer,
+        fontFamily = FontFamily.Serif,
         fontWeight = FontWeight.Normal,
-        fontSize = 12.sp,
-        lineHeight = 16.sp,
-        letterSpacing = 1.sp,
+        fontSize = TextSize12sp,
+        lineHeight = TextSize16sp,
+        letterSpacing = TextSize1sp,
         color = Kabul
     ),
 )
